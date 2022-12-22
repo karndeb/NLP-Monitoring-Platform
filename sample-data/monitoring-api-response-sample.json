@@ -1,0 +1,7 @@
+{"runnable": "100",
+  "starting": "50",
+  "running": "150",
+  "succeeded": "500",
+  "failed": "20",
+  "patients_completed": "2000",
+  "patients_remaining": "1280"}
