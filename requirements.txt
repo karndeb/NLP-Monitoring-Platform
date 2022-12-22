@@ -24,3 +24,5 @@ elastic-apm
 streamlit_option_menu
 streamlit_nested_layout
 streamlit-javascript
+hydralit-components
+streamlit-authenticator
