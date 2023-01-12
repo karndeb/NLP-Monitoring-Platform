@@ -1,5 +1,8 @@
 ## Oncology-Monitoring-Platform
 
+![Oncology Monitoring Platform Demo](https://github.com/PrecisionHealthIntelligence/Oncology-Monitoring-Platform/blob/main/demo/Animation.gif)
+
+
 Start the uvicorn and elastic search backend <br>
 `cd backend\app` <br>
 `docker-compose up`
