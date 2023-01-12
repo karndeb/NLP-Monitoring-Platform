@@ -22,7 +22,7 @@ class RunMonitoring:
             if option:
                 st.write('Yay! 🎉 You selected:', option)
                 with st.container():
-                    f = open('../sample-data/test.json')
+                    f = open('./sample-data/test.json')
                     res = json.load(f)
                     dataDict = dict(ChainMap(*res))
                     # print(dataDict)

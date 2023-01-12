@@ -13,7 +13,7 @@ class PurgeMonitoring:
         with st.container():
             st.write(model.titlePurgeMonitoring)
         with st.container():
-            df = pd.read_csv("../sample-data/Pre-Post-Purge-Artifact-Count.csv", nrows=17)
+            df = pd.read_csv("./sample-data/Pre-Post-Purge-Artifact-Count.csv", nrows=17)
             st.table(df)
 
 

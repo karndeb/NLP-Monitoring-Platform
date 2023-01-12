@@ -19,7 +19,7 @@ class BatchMonitoring:
             st.markdown("---")
         with st.container():
             st.write(model.titleBatchMonitoring)
-        f = open('../sample-data/monitoring-api-response-sample.json')
+        f = open('./sample-data/monitoring-api-response-sample.json')
         res = json.load(f)
         c1 = st.columns(1)
         c2 = st.columns(1)
