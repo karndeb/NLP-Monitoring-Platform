@@ -1,0 +1,26 @@
+# Getting the Base Image
+FROM python:3.8
+
+# Exposing the port
+EXPOSE 8501
+
+# Creating a new folder
+RUN mkdir /src_streamlit
+
+# Change the working directory
+WORKDIR /src_streamlit
+
+# Copy everything to working directory
+COPY . /src_streamlit
+
+# Delete the cache
+RUN python -m pip cache purge
+
+# Installing Packages
+RUN python -m pip install \
+    --no-cache \
+    --disable-pip-version-check \
+    -r requirements.txt
+
+# Running the streamlit service
+CMD ["streamlit", "run", "main.py"]

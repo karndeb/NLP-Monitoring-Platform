@@ -4,7 +4,7 @@ import pandas as pd
 from tools.utilities import format_search, load, make_query
 from tools.config import *
 
-APP_URL = 'http://localhost:9292'
+APP_URL = 'http://host.docker.internal:9292'
 
 
 class LogSearch:

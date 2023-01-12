@@ -14,13 +14,13 @@ from elasticsearch import Elasticsearch
 # apm = make_apm_client(
 #     {"SERVICE_NAME": "fastapi-app", "SERVER_URL": "http://apm-server:8200"}
 # )
-# es = AsyncElasticsearch(os.environ["ELASTICSEARCH_HOSTS"])
+es = AsyncElasticsearch(os.environ["ELASTICSEARCH_HOSTS"])
 # index_name = 'logsearch'
 # app.add_middleware(ElasticAPM, client=apm)
 app = FastAPI()
 
 
-es = AsyncElasticsearch(host="localhost", port=9200)
+# es = AsyncElasticsearch(host="host.docker.internal", port=9200)
 index_name = "logsearch"
 
 
@@ -34,7 +34,7 @@ def upload():
         yields a single document. This function is passed into the bulk()
         helper to create many documents in sequence.
         """
-    with open("data/dts-logs.csv", mode="r") as f:
+    with open("log-data/dts-logs.csv", mode="r") as f:
         reader = csv.DictReader(f, delimiter=",")
         # line = next(reader)
         # len(line)
@@ -122,5 +122,5 @@ async def error():
 async def get_doc(id):
     return await es.get(index=index_name, id=id)
 
-if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=9292)
+# if __name__ == "__main__":
+#     uvicorn.run("main:app", host="0.0.0.0", port=9292)

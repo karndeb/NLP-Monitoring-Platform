@@ -66,23 +66,21 @@ services:
 #      retries: 2
 #      test: curl --write-out 'HTTP %{http_code}' --fail --silent --output /dev/null http://localhost:5601/api/status
 #
-#  app:
-#    container_name: app
-#    build:
-#      dockerfile: dockerfiles/Dockerfile.app
-#      context: .
-#    depends_on:
-#      - apm-server
-#    environment:
-#      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
-#    ports:
-#    - 9292:9292
-#    networks:
-#    - elastic
-#    healthcheck:
-#      interval: 300s
-#      retries: 2
-#      test: curl --write-out 'HTTP %{http_code}' --fail --silent --output /dev/null http://localhost:9292/
+  app:
+    container_name: app
+    build:
+      dockerfile: dockerfiles/Dockerfile.app
+      context: .
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+    ports:
+    - 9292:9292
+    networks:
+    - elastic
+    healthcheck:
+      interval: 300s
+      retries: 2
+      test: curl --write-out 'HTTP %{http_code}' --fail --silent --output /dev/null http://localhost:9292/
 #
 #  ping:
 #    container_name: ping
