@@ -18,7 +18,7 @@ def format_search(resp):
     return matches
 
 
-APP_URL = 'http://host.docker.internal:9292'
+APP_URL = 'http://host.docker.internal:3021'
 
 
 @st.cache(allow_output_mutation=True)

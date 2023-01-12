@@ -1,6 +1,6 @@
 FROM python:3.8
 
-EXPOSE 9292
+EXPOSE 3021
 WORKDIR /
 RUN mkdir -p /log-data
 ADD ./data /log-data
@@ -13,4 +13,4 @@ RUN python -m pip install \
     -r /requirements.txt
 
 COPY main.py /
-CMD uvicorn main:app --host=0.0.0.0 --port=9292
+CMD uvicorn main:app --host=0.0.0.0 --port=3021

@@ -74,13 +74,13 @@ services:
     environment:
       ELASTICSEARCH_HOSTS: http://elasticsearch:9200
     ports:
-    - 9292:9292
+    - 3021:3021
     networks:
     - elastic
     healthcheck:
       interval: 300s
       retries: 2
-      test: curl --write-out 'HTTP %{http_code}' --fail --silent --output /dev/null http://localhost:9292/
+      test: curl --write-out 'HTTP %{http_code}' --fail --silent --output /dev/null http://localhost:3021/
 #
 #  ping:
 #    container_name: ping

@@ -10,5 +10,5 @@ Start the uvicorn and elastic search backend <br>
 Start the streamlit frontend <br>
 `cd frontend` <br>
 `docker build -t streamlit/app --no-cache . -f Dockerfile.yml` <br>
-`docker run -d --name streamlit_app -p 8501:8501 streamlit/app`
+`docker run -d --name streamlit_app -p 3022:3022 streamlit/app`
 
