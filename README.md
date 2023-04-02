@@ -1,6 +1,6 @@
 ## Oncology-Monitoring-Platform
 
-![Oncology Monitoring Platform Demo](https://github.com/PrecisionHealthIntelligence/Oncology-Monitoring-Platform/blob/main/demo/Animation.gif)
+![Oncology Monitoring Platform Demo](https://github.com/karndeb/Oncology-Monitoring-Platform/blob/main/demo/Animation.gif)
 
 
 Start the uvicorn and elastic search backend <br>
