@@ -2,6 +2,7 @@
 
 ![Oncology Monitoring Platform Demo](https://github.com/karndeb/Oncology-Monitoring-Platform/blob/main/demo/Animation.gif)
 
+Added Login and Authentication system
 
 Start the uvicorn and elastic search backend <br>
 `cd backend\app` <br>
